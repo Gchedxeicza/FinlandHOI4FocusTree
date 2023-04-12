@@ -1,0 +1,23 @@
+state={
+	id=911
+	name="STATE_911"
+	history={
+		owner = FIN
+		
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+
+		}
+		add_core_of = FIN
+		add_core_of = KAR
+
+	}
+	manpower=229564
+	state_category=town
+	provinces={
+		103 167 203 2992 3069 3097 3107 3158 6061 6076 6142 11115 11130 11167 
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

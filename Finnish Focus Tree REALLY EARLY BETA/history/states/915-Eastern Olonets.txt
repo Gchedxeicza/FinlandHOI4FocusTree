@@ -1,0 +1,27 @@
+state={
+	id=915
+	name="STATE_915"
+
+	history={
+		victory_points = {
+			11159 25 
+		}
+		owner = FIN
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+
+		}
+		add_core_of = FIN
+		add_core_of = KAR
+
+	}
+
+	provinces={
+		92 2356 3033 3084 3144 6106 9118 11092 11159 13194 13198 
+	}
+	manpower=896744
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}

@@ -1,0 +1,29 @@
+add_namespace = finland_news
+
+news_event = {
+	id = finland_news.1
+	title = finland_news.1.t
+	desc = finland_news.1.desc
+	picture = GFX_news_event_generic_ruins 
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			original_tag = JAP
+				OR = {
+					original_tag = FIN
+				}
+		}
+		#Japan is pogging!
+		name = finland_news.1.a
+	}
+	
+	option = {
+		#Others not pogging!
+		name = finland_news.1.b
+	}
+
+}

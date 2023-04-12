@@ -1,0 +1,334 @@
+ideas = {
+
+	country = {
+		sisu = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.25
+				attrition = -0.2
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+		FIN_national_brotherhood_idea = {
+
+			picture = generic_infantry_bonus
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			modifier = {
+				send_volunteer_size = 1
+				send_volunteer_divisions_required = -0.75
+				lend_lease_tension = -0.30
+			}
+		}
+		winter_war_ns = {
+			picture = tur_sub_zero_survival_training
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			modifier = {
+
+				conscription = 0.03
+				mobilization_speed = 0.85
+				winter_attrition_factor = -0.2
+				army_core_defence_factor = 0.3
+			}
+		}
+		finnish_armed_forces_1 = {
+			picture = tur_arctic_wolves
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.2
+				terrain_penalty_reduction = 0.5
+			}
+		}
+		finnish_armed_forces_2 = {
+			picture = tur_arctic_wolves
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.2
+				terrain_penalty_reduction = 0.5
+				max_dig_in_factor = 0.3
+				dig_in_speed_factor  = 0.7
+			}
+		}
+		finnish_armed_forces_3 = {
+			picture = tur_arctic_wolves
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.2
+				terrain_penalty_reduction = 0.5
+				max_dig_in_factor = 0.3
+				dig_in_speed_factor  = 0.7
+				experience_gain_bicycle_battalion_combat_factor = 0.7
+				
+			}
+		}
+		finnish_armed_forces_4 = {
+			picture = tur_arctic_wolves
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.2
+				terrain_penalty_reduction = 0.5
+				max_dig_in_factor = 0.3
+				dig_in_speed_factor  = 0.7
+				experience_gain_bicycle_battalion_combat_factor = 0.7
+				army_armor_speed_factor = 0.3
+				
+			}
+		}
+		finnish_armed_forces_5 = {
+			picture = tur_arctic_wolves
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				winter_attrition_factor = -0.2
+				terrain_penalty_reduction = 0.5
+				max_dig_in_factor = 0.3
+				dig_in_speed_factor  = 0.7
+				experience_gain_bicycle_battalion_combat_factor = 0.7
+				army_armor_speed_factor = 0.3
+				max_command_power = 100
+				initiative_factor = 0.3
+			}
+		}
+		
+		fin_king_1 = {
+			picture = fin_gustav_v
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				neutrality_acceptance = 50
+				stability_factor = 0.15
+			}
+		}
+		
+		fin_king_2 = {
+			picture = fin_christian_x
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.15
+				surrender_limit = 0.1
+			}
+		}
+		
+		fin_king_3 = {
+			picture = fin_hakkon
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.1
+				fascism_acceptance = -50
+			}
+		}
+		
+		FIN_royal_dictator = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = ast_abandon_the_westminster_system
+
+			modifier = {
+				neutrality_drift = 0.15
+				drift_defence_factor = 0.1
+				join_faction_tension = -0.2
+				lend_lease_tension = -0.2
+				send_volunteers_tension = -0.2
+				justify_war_goal_time = -0.15
+			}
+		}
+		FIN_purge_fascist = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascism_banned
+
+			modifier = {
+				fascism_drift = -1
+			}
+		}
+		fin_toxic_water = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = tur_disorganised_armed_forces
+
+			modifier = {
+				war_support_factor = -0.35
+				army_org_factor = -0.25
+				army_speed_factor = -0.25
+				training_time_factor = 0.35
+				naval_coordination = -0.25
+				air_accidents_factor = 0.35
+				minimum_training_level = 0.15
+				surrender_limit = -0.15
+				
+			}
+		}
+	}
+
+	# TECHNOLOGY
+
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		crichton = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			# submarine and defence ship production
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		
+		valtion_lentokonetehdas = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = FIN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			# assembled Junkers, fast bombers
+		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
