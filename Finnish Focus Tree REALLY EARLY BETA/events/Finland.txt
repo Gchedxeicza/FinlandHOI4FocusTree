@@ -557,3 +557,4 @@ country_event = {
 		add_ideas = fin_toxic_water
 	}
 }
+

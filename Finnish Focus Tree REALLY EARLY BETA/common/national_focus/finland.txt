@@ -5,7 +5,7 @@
 ### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 ### search_filters = {FOCUS_FILTER_MANPOWER}
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
-
+# Finland focus tree by Gched Discord Gched No.7694
 focus_tree = {
 	id = finland_focus
 	
@@ -1814,6 +1814,259 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = FIN_civil_war
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_mutual_economic_aid }
+		x = 0
+		y = 1
+		relative_position_id = FIN_mutual_economic_aid
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			set_variable = {
+				var = fin_civil_war_size_var
+				value = 1
+			}
+			if = {
+				limit = { 
+					has_completed_focus = FIN_request_help
+				}
+				add_to_variable = {
+					var = fin_civil_war_size_var
+					value = -0.1
+				}
+			}
+			if = {
+				limit = { 
+					has_completed_focus = FIN_even_more_help
+				}
+				add_to_variable = {
+					var = fin_civil_war_size_var
+					value = -0.3
+				}
+			}
+			if = {
+				limit = { 
+					has_completed_focus = FIN_help_me
+				}
+				add_to_variable = {
+					var = fin_civil_war_size_var
+					value = -0.4
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus= FIN_help_me
+				}
+				SOV = { 
+					set_autonomy = {
+						target = FIN
+						autonomy_state = autonomy_integrated_puppet
+					}
+				}
+			}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = neutrality
+				size = fin_civil_war_size_var
+			}
+		}
+	}
+	focus = {
+		id = FIN_after_war
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_civil_war }
+		x = 0
+		y = 1
+		relative_position_id = FIN_civil_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_timed_idea = { 
+				idea = SPA_recovering_from_civil_war_3
+				days = 1195
+			}
+		}
+	}
+	focus = {
+		id = FIN_request_help
+		#Military help section
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_mutual_economic_aid }
+		x = 2
+		y = 1
+		relative_position_id = FIN_mutual_economic_aid
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_manpower = 260000
+			#set_variable = {
+				#var = fin_civil_war_size
+				#move to civil war declaration
+				#value = 1
+			#}
+		}
+	}
+	focus = {
+		id = FIN_even_more_help
+		#Military help section
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_request_help }
+		x = 0
+		y = 1
+		relative_position_id = FIN_request_help
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			
+			add_manpower = 460400
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 355
+				producer = SOV
+			}
+		}
+	}
+	focus = {
+		id = FIN_help_me
+		#PLAESE I CANNOT WIN HELP ME STALINNNNNNNNNNNNN
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_even_more_help }
+		x = 0
+		y = 1
+		relative_position_id = FIN_even_more_help
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			SOV = {
+				NOT = { has_war_with = ROOT }
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = SPR_expand_soviet_aid_tt
+			add_manpower = 460400
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 55500
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 555
+				producer = SOV
+			}
+		}
+	}
+	focus = {
 		id = FIN_empower_the_king
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 23
@@ -2343,7 +2596,11 @@ focus_tree = {
 		cost = 10
 		relative_position_id = fin_unite_nords
 		search_filters = { FOCUS_FILTER_POLITICAL }
-	
+		available = {
+			NOT = {
+				has_completed_focus = FIN_request_help
+			}
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
