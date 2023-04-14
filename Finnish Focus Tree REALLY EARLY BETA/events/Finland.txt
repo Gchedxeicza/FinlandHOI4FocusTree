@@ -557,4 +557,38 @@ country_event = {
 		add_ideas = fin_toxic_water
 	}
 }
+#Should Mannerheim die?
+country_event = {
+	id = finland.16
+	title = finland.16.t
+	desc = finland.16.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
 
+	option = {
+	#NOOOOOOOOOOO
+		ai_chance = {
+			base = 99
+		}
+		name = finland.16.a
+		add_ideas = fin_mannerheim_support
+		add_popularity = {
+			ideology = communism
+			popularity = -0.2
+		}
+	}
+	option = {
+	#Yeah, kill him
+		ai_chance = {
+			base = 1
+		}
+		name = finland.16.b
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+			set_stability = 0.3
+			set_war_support = 0.2
+		}
+	}
+}

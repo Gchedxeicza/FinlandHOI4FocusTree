@@ -277,6 +277,25 @@ ideas = {
 				
 			}
 		}
+		fin_mannerheim_support = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				 has_government = communism
+			}
+
+			removal_cost = -1
+
+			picture = ast_abandon_the_westminster_system
+
+			modifier = {
+				war_support_factor = 0.35
+				surrender_limit = 0.15
+				stability_factor = 0.15
+			}
+		}
 	}
 
 	# TECHNOLOGY

@@ -1586,3 +1586,7 @@
  finland.15.t:0 "Toxic waste detected!"
  finland.15.desc:0 "We have detected toxic waste in our water supply! It has been a while since it was placed here meaning it is in our food! Nothing is safe to eat or drink!"
  finland.15.a:0 "Bastards!"
+ finland.16.t:0 "The Fate of Mannerheim"
+ finland.16.desc:0 "After winning the second Finnish civil war we have to decide the fate of the oppositions' leader, he has made many communists suffer and as such the most popular opinion among our party is to ll him, but he is very popular among the lower class and killing him would only anger them, so we have a choice keep him and show our dedication to keeping the lower class happy or execute him to keep the communists happy."
+ finland.16.a:0 "Keep him"
+ finland.16.b:0 "He must die"

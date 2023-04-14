@@ -17,11 +17,11 @@ characters={
 		name=FIN_aimo_aaltonen
 		portraits={
 			civilian={
-				large=GFX_portrait_FIN_aimo_aaltonen
+				large=GFX_portrait_FIN_kullervo_manner
 			}
 		}
 		country_leader={
-			ideology=marxism
+			ideology=stalinism
 			expire="1965.1.1.1"
 			id=-1
 		}

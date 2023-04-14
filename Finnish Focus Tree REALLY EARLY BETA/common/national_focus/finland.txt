@@ -1762,7 +1762,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_timed_idea = { idea = communist_influence days = 720 }
+			add_timed_idea = { 
+				idea = communist_influence days = 720
+			}
 		}
 	}	
 	focus = {
@@ -1909,11 +1911,6 @@ focus_tree = {
 		}
 
 		available = {
-			SOV = {
-				NOT = { has_war_with = ROOT }
-				exists = yes
-				has_capitulated = no
-			}
 		}
 
 		bypass = {
@@ -1973,6 +1970,134 @@ focus_tree = {
 			#}
 		}
 	}
+	focus = {
+		id = FIN_mannerheim_should_he_die
+		#DIE ELL
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_after_war }
+		x = 0
+		y = 1
+		relative_position_id = FIN_after_war
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			country_event = { 
+				id = finland.16 hours = 16 random_hours = 8 
+			}
+		}
+		
+	}
+	focus = {
+		id = FIN_after_the_baltics
+		#DIE ELL
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_mannerheim_should_he_die }
+		x = 0
+		y = 1
+		relative_position_id = FIN_mannerheim_should_he_die
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			EST = {
+				add_timed_idea = { 
+				idea = communist_influence days = 720
+				}
+			}
+			LAT = {
+				add_timed_idea = { 
+				idea = communist_influence days = 720
+				}
+			}
+			LIT = {
+				add_timed_idea = { 
+				idea = communist_influence days = 720
+				}
+			}
+		}
+		
+	}
+	focus = {
+		id = FIN_gimme_your_autonomy
+		#i NEEEEEEEDDDDDDD ITTTTTTTTT
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = FIN_after_the_baltics }
+		x = 0
+		y = 1
+		relative_position_id = FIN_after_the_baltics
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			set_autonomy = {
+				target = LIT
+				autonomy_state = autonomy_integrated_puppet
+			}
+			set_autonomy = {
+				target = LAT
+				autonomy_state = autonomy_integrated_puppet
+			}
+			set_autonomy = {
+				target = EST
+				autonomy_state = autonomy_integrated_puppet
+			}
+		}
+		
+	}
+						set_autonomy = {
+						target = FIN
+						autonomy_state = autonomy_integrated_puppet
+					}
 	focus = {
 		id = FIN_even_more_help
 		#Military help section
